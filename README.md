@@ -28,11 +28,13 @@ Power Usage Calendar Card for Home Assistant
 
 在仪表板配置中添加资源引用：
 
-yaml
+```yaml
 resources:
   - url: /local/power-usage-calendar-card.js
     type: module
 
+
+📸 界面预览
     
 ⚙️ 配置示例
 yaml
