@@ -1,7 +1,7 @@
-Power Usage Calendar Card for Home Assistant
+### Power Usage Calendar Card for Home Assistant
 一个美观、功能强大的电力使用量日历卡片，用于在 Home Assistant 仪表板上直观展示电力消耗数据。
 
-✨ 特性亮点
+## ✨ 特性亮点
 📅 日历视图：直观展示每日用电量和电费
 
 📊 多维度分析：年、月、日三个时间维度的详细数据
@@ -18,11 +18,11 @@ Power Usage Calendar Card for Home Assistant
 
 🔍 交互详情：点击日期查看详细的用电分布
 
-📸 界面预览
+## 📸 界面预览
 
 
 
-🚀 安装方法
+## 🚀 安装方法
 手动安装
 将 power-usage-calendar-card.js 文件复制到 Home Assistant 的 www 目录
 
@@ -32,20 +32,60 @@ Power Usage Calendar Card for Home Assistant
 resources:
   - url: /local/power-usage-calendar-card.js
     type: module
+```
+## 🛠️必要组件
+
+1、国家电网组件
+
+2、国家电网辅助信息组件   https://github.com/xiaoshi930/state_grid_info
+
+3、echarts.min.js库
+
+如果不安装以上2个组件将无法运行，也可以使用自定义实体的状态属性作为数据来源，数据结构如下，但是echarts.min.js库是必须的。
+```yaml
+{
+  "daylist": [
+    {
+      "day": "2024-01-01",
+      "dayEleNum": 15.5,
+      "dayEleCost": 8.53,
+      "dayVPq": 5.2,
+      "dayPPq": 6.3,
+      "dayNPq": 3.5,
+      "dayTPq": 0.5
+    }
+  ],
+  "monthlist": [
+    {
+      "month": "2024-01",
+      "monthEleNum": 450.5,
+      "monthEleCost": 247.78,
+      "monthVPq": 150.2,
+      "monthPPq": 180.3,
+      "monthNPq": 100.5,
+      "monthTPq": 19.5
+    }
+  ],
+  "yearlist": [
+    {
+      "year": "2024",
+      "yearEleNum": 5400.5,
+      "yearEleCost": 2970.28,
+      "yearVPq": 1800.2,
+      "yearPPq": 2160.3,
+      "yearNPq": 1200.5,
+      "yearTPq": 239.5
+    }
+  ]
+}
+```
 
 
-📸 界面预览
-    
-⚙️ 配置示例
-yaml
+##  ⚙️ 配置示例
+```yaml
 type: custom:power-usage-calendar-card
 entity: sensor.power_usage_stats
 title: 家庭用电统计
 hide_title: false
 width: 400px
-配置选项
-参数	类型	默认值	说明
-entity	string	必填	提供数据的传感器实体
-title	string	"电力使用量日历"	卡片标题
-hide_title	boolean	false	是否隐藏标题
-width	string	"400px"	卡片宽度
+```
