@@ -47,9 +47,9 @@ resources:
 
 2、国家电网辅助信息组件   https://github.com/xiaoshi930/state_grid_info
 
-3、echarts.min.js库，文件放在wwww文件夹下
+3、echarts.min.js库，自动从cdn加载https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js
 
-如果不安装以上2个组件将无法运行，也可以使用自定义实体的状态属性作为数据来源，数据结构如下，但是echarts.min.js库是必须的。
+如果不安装以上1、2个组件将无法运行，也可以使用自定义实体的状态属性作为数据来源，数据结构如下：
 ```yaml
 {
   "daylist": [
