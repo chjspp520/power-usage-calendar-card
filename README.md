@@ -20,8 +20,16 @@
 
 ## 📸 界面预览
 
+<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+  <img src="https://github.com/chjspp520/power-usage-calendar-card/blob/main/%E5%B9%B4%E7%94%A8%E7%94%B5.png" alt="截图" style="width: 30%; height: auto; margin: 5px;">
+  <img src="https://github.com/chjspp520/power-usage-calendar-card/blob/main/%E6%97%A5%E5%8E%86%E5%BC%B9%E7%AA%97.png" alt="截图" style="width: 30%; height: auto; margin: 5px;">
+  <img src="https://github.com/chjspp520/power-usage-calendar-card/blob/main/%E6%97%A5%E7%94%A8%E7%94%B5.png" alt="截图" style="width: 30%; height: auto; margin: 5px;">  
+  <img src="https://github.com/chjspp520/power-usage-calendar-card/blob/main/%E6%9C%88%E7%94%A8%E7%94%B5.png" alt="截图" style="width: 30%; height: auto; margin: 5px;">  
+  <img src="https://github.com/chjspp520/power-usage-calendar-card/blob/main/%E7%94%A8%E7%94%B5%E6%97%A5%E5%8E%86.png" alt="截图" style="width: 30%; height: auto; margin: 5px;">  
+  <img src="https://github.com/chjspp520/power-usage-calendar-card/blob/main/power-usage-calendar-card%E6%BC%94%E7%A4%BA.mp4" alt="演示视频" style="width: 30%; height: auto; margin: 5px;">  
 
 
+  
 ## 🚀 安装方法
 手动安装
 将 power-usage-calendar-card.js 文件复制到 Home Assistant 的 www 目录
@@ -39,7 +47,7 @@ resources:
 
 2、国家电网辅助信息组件   https://github.com/xiaoshi930/state_grid_info
 
-3、echarts.min.js库
+3、echarts.min.js库，文件放在wwww文件夹下
 
 如果不安装以上2个组件将无法运行，也可以使用自定义实体的状态属性作为数据来源，数据结构如下，但是echarts.min.js库是必须的。
 ```yaml
